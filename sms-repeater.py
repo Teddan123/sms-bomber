@@ -98,12 +98,12 @@ def smsrep():
     input_string2 = input("  \033[1;32m 2.Enter Text and press Enter:\033[1;0m\n")
     while True:
       try:
-        user_number = int(input("  \033[1;32m 3.How many times repeate SMS to this numbers? (min 1 - 15 max):\033[1;0m\n"))
-        assert 0 < user_number < 15  # MAX LIMIT 15 
+        user_number = int(input("  \033[1;32m 3.How many times repeate SMS to this numbers? (min 1 - 10000 max):\033[1;0m\n"))
+        assert 0 < user_number < 10000  # MAX LIMIT 10000 
       except ValueError:
         print("  \033[1;31mNot a number! Please enter a number.\033[1;0m")
       except AssertionError:
-        print("  \033[1;31mPlease enter a number between 1 and 15\033[1;0m")
+        print("  \033[1;31mPlease enter a number between 1 and 10000\033[1;0m")
       else:     
         numbers = int_string.split(",")
         n = int(user_number)
